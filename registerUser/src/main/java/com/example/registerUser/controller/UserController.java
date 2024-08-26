@@ -31,7 +31,7 @@ public class UserController {
 			User registeredUser=userService.registerUser(user);
 			
 			String token=generateConfirmationToken();
-			String confirmationLink="https://localhost:8080:api/confirm?token"+token;
+			String confirmationLink="https://localhost:8080/api/confirm?Token="+token;
 			
 			userService.saveConfirmationToken(registeredUser,token);
 			
